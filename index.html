@@ -114,6 +114,51 @@ body{
     font-size:16px;
     cursor:pointer;
 }
+/* =========================
+   CORAZON DE ROSAS
+=========================*/
+#contenedorCorazon{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:450px;
+    height:400px;
+    z-index:999;
+}
+
+/* ROSAS */
+.rosaCorazon{
+    position:absolute;
+    font-size:26px;
+    opacity:0;
+    animation: aparecerRosa 1.5s forwards;
+}
+
+@keyframes aparecerRosa{
+    from{opacity:0; transform:scale(0);}
+    to{opacity:1; transform:scale(1);}
+}
+
+/* FOTO CENTRAL */
+#fotoCentral{
+    position:absolute;
+    width:160px;
+    height:160px;
+    object-fit:cover;
+    border-radius:50%;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) scale(0);
+    box-shadow:0 0 30px rgba(255,0,90,0.7);
+    animation: aparecerFotoCentral 1.5s forwards;
+    animation-delay:1.2s;
+}
+
+@keyframes aparecerFotoCentral{
+    from{ transform:translate(-50%,-50%) scale(0); }
+    to{ transform:translate(-50%,-50%) scale(1); }
+}
 </style>
 </head>
 
@@ -151,8 +196,8 @@ body{
        GALERIA DE FOTOS
     ================================*/
     const imagenes = [
-        "foto1.jpg","foto2.jpg","foto3.jpg",
-        "foto4.jpg","foto5.jpg","foto6.jpg"
+        "foto1.JPG","foto2.JPG","foto3.JPG",
+        "foto4.JPG","foto5.JPG","foto6.JPG"
     ];
     
     let index = 0;
