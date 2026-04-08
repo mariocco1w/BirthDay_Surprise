@@ -1,0 +1,67 @@
+/* ROSAS */
+.rosa{
+    position: fixed;
+    font-size: 30px;
+    animation: flotarRosa 6s linear forwards;
+    z-index:999;
+}
+
+@keyframes flotarRosa{
+    0%{
+        transform: translateY(100vh) scale(0.5);
+        opacity:0;
+    }
+    20%{opacity:1;}
+    100%{
+        transform: translateY(-20vh) scale(1.2) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* Efecto clic pastel */
+.cake:hover{
+    cursor:pointer;
+    transform: scale(1.05);
+}
+/* CONTENEDOR CORAZON */
+#contenedorCorazon{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:500px;
+    height:450px;
+    pointer-events:none;
+}
+
+/* ROSAS DEL CORAZON */
+.rosaCorazon{
+    position:absolute;
+    font-size:28px;
+    opacity:0;
+    animation: aparecerRosa 2s forwards;
+}
+
+@keyframes aparecerRosa{
+    from{opacity:0; transform:scale(0);}
+    to{opacity:1; transform:scale(1);}
+}
+
+/* FOTO CENTRAL */
+#fotoCentral{
+    position:absolute;
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    border-radius:50%;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) scale(0);
+    box-shadow:0 0 25px rgba(255,0,90,0.6);
+    animation: aparecerFotoCentral 2s forwards;
+    animation-delay:1.5s;
+}
+
+@keyframes aparecerFotoCentral{
+    to{ transform:translate(-50%,-50%) scale(1); }
+}
