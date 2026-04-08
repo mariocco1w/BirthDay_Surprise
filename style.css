@@ -29,17 +29,18 @@
     top:50%;
     left:50%;
     transform:translate(-50%,-50%);
-    width:500px;
-    height:450px;
+    width:420px;
+    height:380px;
+    z-index:1000;
     pointer-events:none;
 }
 
-/* ROSAS DEL CORAZON */
+/* ROSAS */
 .rosaCorazon{
     position:absolute;
-    font-size:28px;
+    font-size:26px;
     opacity:0;
-    animation: aparecerRosa 2s forwards;
+    animation: aparecerRosa 1.5s forwards;
 }
 
 @keyframes aparecerRosa{
@@ -50,18 +51,19 @@
 /* FOTO CENTRAL */
 #fotoCentral{
     position:absolute;
-    width:180px;
-    height:180px;
+    width:150px;
+    height:150px;
     object-fit:cover;
     border-radius:50%;
     top:50%;
     left:50%;
     transform:translate(-50%,-50%) scale(0);
-    box-shadow:0 0 25px rgba(255,0,90,0.6);
-    animation: aparecerFotoCentral 2s forwards;
-    animation-delay:1.5s;
+    box-shadow:0 0 30px rgba(255,0,90,0.7);
+    animation: aparecerFotoCentral 1.5s forwards;
+    animation-delay:1.2s;
 }
 
 @keyframes aparecerFotoCentral{
+    from{ transform:translate(-50%,-50%) scale(0); }
     to{ transform:translate(-50%,-50%) scale(1); }
 }
